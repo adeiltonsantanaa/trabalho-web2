@@ -23,19 +23,20 @@ $json_str = '{"produtos": '.
 
 $jsonObj = json_decode($json_str);
 $produtos = $jsonObj->produtos;
-?>
-
-
+?>  
     <?php
-    if ($_POST['nome'] != null) {
-    echo "<h1>Bem vindo, ". $_POST['nome']."</h1>";
-} else {
-    echo "";
-}
-    
+        if ($_POST['nome'] != null) {
+            echo "<div class='divForm'>";
+            echo "<h1 class='nomeH1'>Bem vindo, ". $_POST['nome'] ."<br>Idade: " . $_POST['idade'] ."<br>Qtd Prod: ".$_POST['qtdProd']."<br>E-mail: ".$_POST['email']." </h1>";
+            echo "</div>";
+        } else {
+            echo "";
+        }
     ?>
+
     <?php
-    echo "<table>";
+    echo "<div class='divPhp'>";
+    echo "<table class='tablePhp'>";
         echo "<tr>";
         echo "<th>Id</th>";
         echo "<th>Produto</th>";
@@ -47,10 +48,11 @@ $produtos = $jsonObj->produtos;
             echo "<td>$e->produto</td>";
             echo "<td>$e->quantidade</td>";
             echo "</tr>";
+            if (++$i >= $_POST['qtdProd']) break;
         }
     echo "</table>";
+    echo "</div>";
     ?>
 
-<script src="teste.js"></script>
 </body>
 </html>

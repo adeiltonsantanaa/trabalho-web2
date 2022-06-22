@@ -1,19 +1,44 @@
+body {
+    background: linear-gradient(275deg, black, #1a0e0e);
+}
+
 table,
 th,
 td {
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
     padding: 10px;
+    background-color: none;
+    color: #fff;
 }
 
-table {
-    align-items: center;
-    text-align: center;
-    position: absolute;
+.tablePhp {
+    position: relative;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 }
 
-h1 {
+.divPhp {
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 50%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(73, 138, 219, 0.07);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.7px);
+    -webkit-backdrop-filter: blur(6.7px);
+    border: 1px solid rgba(73, 138, 219, 0.23);
+}
+
+.nomeH1 {
+    color: #fff;
+}
+
+.divForm {
     text-align: center;
 }
