@@ -1,3 +1,7 @@
+body {
+    background: linear-gradient(275deg, black, #1a0e0e);
+}
+
 #form {
     display: flex;
     flex-direction: column;
@@ -22,8 +26,13 @@ label {
     position: absolute;
     top: 50%;
     left: 50%;
-    background-color: blue;
     width: 50%;
     height: 50%;
     transform: translate(-50%, -50%);
+    background: rgba(73, 138, 219, 0.07);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.7px);
+    -webkit-backdrop-filter: blur(6.7px);
+    border: 1px solid rgba(73, 138, 219, 0.23);
 }
