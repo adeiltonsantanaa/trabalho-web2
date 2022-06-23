@@ -2,6 +2,11 @@ body {
     background: linear-gradient(275deg, black, #1a0e0e);
 }
 
+.divPhp>h1 {
+    color: #fff;
+    margin: 0;
+}
+
 table,
 th,
 td {
@@ -14,7 +19,7 @@ td {
 .tablePhp {
     position: relative;
     left: 50%;
-    top: 50%;
+    top: 40%;
     transform: translate(-50%, -50%);
 }
 

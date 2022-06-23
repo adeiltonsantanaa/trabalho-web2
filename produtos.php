@@ -10,20 +10,20 @@
 <body>
 
 <?php
-error_reporting(E_ALL ^ E_WARNING);
+ error_reporting(E_ALL ^ E_WARNING);
 
-$json_str = '{"produtos": '.
-		'[{"id": 1, "produto": "lapis", "quantidade": 3},'.
-		'{"id": 2, "produto": "caderno", "quantidade": 4},'.
-        '{"id": 3, "produto": "caneta", "quantidade": 1},'.
-        '{"id": 4, "produto": "borracha", "quantidade": 3},'.
-        '{"id": 5, "produto": "apagador", "quantidade": 2},'.
-		'{"id": 6, "produto": "apontador", "quantidade": 5}'.
-		']}';
-
-$jsonObj = json_decode($json_str);
-$produtos = $jsonObj->produtos;
-?>  
+$produtos = array (
+    array(1,"Lapis",3),
+    array(2,"caderno",2),
+    array(3,"caneta",5),
+    array(4,"borracha",8),
+    array(5,"apagador",1),
+    array(6,"apontador",34),
+    array(7,"canetão",9),
+    array(8,"cola",31)
+  );
+  shuffle($produtos);
+?>
     <?php
         if ($_POST['nome'] != null) {
             echo "<div class='divForm'>";
@@ -33,23 +33,22 @@ $produtos = $jsonObj->produtos;
             echo "";
         }
     ?>
-
     <?php
     echo "<div class='divPhp'>";
     echo "<table class='tablePhp'>";
+        echo "<h1>Listagem de Produtos</h1>";
         echo "<tr>";
         echo "<th>Id</th>";
         echo "<th>Produto</th>";
         echo "<th>quantidade</th>";
         echo "</tr>";
-        foreach ( $produtos as $e) {
-            echo "<tr>";
-            echo "<td>$e->id</td>";
-            echo "<td>$e->produto</td>";
-            echo "<td>$e->quantidade</td>";
-            echo "</tr>";
-            if (++$i >= $_POST['qtdProd']) break;
-        }
+        for($i = 0; $i < $_POST['qtdProd']; $i++) {
+                echo "<tr>";
+                echo "<td>".$produtos[$i][0]."</td>";
+                echo "<td>".$produtos[$i][1]."</td>";
+                echo "<td>".$produtos[$i][2]."</td>";
+                echo "</tr>";
+        }   
     echo "</table>";
     echo "</div>";
     ?>
