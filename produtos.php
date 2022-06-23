@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo2.css">
+    <link rel="stylesheet" href="estilo.css">
     <title>Produtos</title>
 </head>
 <body>
@@ -35,18 +35,18 @@ $produtos = array (
     ?>
     <?php
     echo "<div class='divPhp'>";
-    echo "<table class='tablePhp'>";
+    echo "<table class='tablePhp conjuntoTable'>";
         echo "<h1>Listagem de Produtos</h1>";
         echo "<tr>";
-        echo "<th>Id</th>";
-        echo "<th>Produto</th>";
-        echo "<th>quantidade</th>";
+        echo "<th class='conjuntoTable'>Id</th>";
+        echo "<th class='conjuntoTable'>Produto</th>";
+        echo "<th class='conjuntoTable'>quantidade</th>";
         echo "</tr>";
         for($i = 0; $i < $_POST['qtdProd']; $i++) {
                 echo "<tr>";
-                echo "<td>".$produtos[$i][0]."</td>";
-                echo "<td>".$produtos[$i][1]."</td>";
-                echo "<td>".$produtos[$i][2]."</td>";
+                echo "<td class='conjuntoTable'>".$produtos[$i][0]."</td>";
+                echo "<td class='conjuntoTable'>".$produtos[$i][1]."</td>";
+                echo "<td class='conjuntoTable'>".$produtos[$i][2]."</td>";
                 echo "</tr>";
         }   
     echo "</table>";
