@@ -2,11 +2,6 @@ body {
     background: linear-gradient(275deg, black, #1a0e0e);
 }
 
-.divPhp>h1 {
-    color: #fff;
-    margin: 0;
-}
-
 table,
 th,
 td {
@@ -24,7 +19,6 @@ td {
 }
 
 .divPhp {
-    align-items: center;
     text-align: center;
     position: absolute;
     left: 50%;
@@ -40,8 +34,9 @@ td {
     border: 1px solid rgba(73, 138, 219, 0.23);
 }
 
-.nomeH1 {
+h1 {
     color: #fff;
+    margin: 0;
 }
 
 .divForm {
